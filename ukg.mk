@@ -2,19 +2,19 @@
 $(call inherit-product, device/samsung/p4wifi/p4wifi.mk)
 
 # Grouper Overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/aosp/overlay/grouper
+PRODUCT_PACKAGE_OVERLAYS += vendor/ukg/overlay/grouper
 
 # Tablet Overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/aosp/overlay/common_tablet
+PRODUCT_PACKAGE_OVERLAYS += vendor/ukg/overlay/common_tablet
 
 # Inherit common product files.
-$(call inherit-product, vendor/aosp/config/common.mk)
+$(call inherit-product, vendor/ukg/config/common.mk)
 
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := xylon_p4wifi
+PRODUCT_NAME := ukg_p4wifi
 PRODUCT_BRAND := samsung
 PRODUCT_DEVICE := p4wifi
 PRODUCT_MODEL := GT-P7510
@@ -26,7 +26,7 @@ PRODUCT_RELEASE_NAME := p4wifi
 
 # Copy maguro specific prebuilt files
 PRODUCT_COPY_FILES +=  \
-    vendor/aosp/prebuilt/bootanimation/bootanimation_1280_800.zip:system/media/bootanimation.zip \
-    vendor/aosp/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
-    vendor/aosp/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
+    vendor/ukg/prebuilt/bootanimation/bootanimation_1280_800.zip:system/media/bootanimation.zip \
+    vendor/ukg/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
+    vendor/ukg/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
